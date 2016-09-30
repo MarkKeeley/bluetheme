@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="reckless experimentation">
+
+    <title>shut up and test layouts with me</title>
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+<body>
+  <header>
+      <div id="header-container">
+        <div id="topnav">
+          <div id="header-title">
+  	     	 {{ .Title }}
+  	      </div>
+  	      <div id="header-subtitle">
+  	    	  {{ .Site.Params.subtitle }}
+  	      </div>
+        </div>
+  	    <nav>
+        	<ul>
+            <li><a href="#"><i class='fa fa-home fa-fw'></i>Home</a></li>
+    	      <li><a href="#"><i class='fa fa-list fa-fw'></i>Posts</a></li>
+    	      <li><a href="#"><i class='fa fa-tag fa-fw'></i>Tags</a></li>
+    	      <li><a href="#"><i class='fa fa-book fa-fw'></i>Go+SDL2</a></li>
+            <li><a href="#"><i class='fa fa-link fa-fw'></i>Links</a></li>
+          </ul>
+  		  </nav>
+      </div>   
+  </header>	
+  
+  <div id="main-container">
+
+    <article>
+      <h1><a href="#"><center>Article Title</center></a></h1>
+      <i class="fa fa-calendar fa-fw"></i>September 28, 2016<br>
+      <i class="fa fa-tags fa-fw"></i>Tags<br>
+      <i class="fa fa-user fa-fw"></i>By Author Name<br>
+      <p>A simple flexbox demo showcasing the flex-direction property to achieve source order independence for the classic <em>main content with sidebar</em> layout.</p>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officiis dignissimos fugiat incidunt ullam optio tempora voluptatibus repudiandae harum repellendus a totam necessitatibus tenetur vero facere in suscipit ipsam provident.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis asperiores molestias consequatur culpa aliquid quam aspernatur aut vero accusantium amet. Quo repudiandae voluptas harum fuga dolor facilis similique expedita nemo.</p>
+      <p style="text-align: right;"><a class="read-more" href="#">Continue Reading <i class="fa fa-arrow-right"></i></a></p>
+    </article>
+    <br>
+    {{ range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+
+  </div>
+  <footer>
+        Copyright &copy; 2016 All rights reserved. <a href="#"><i class="fa fa-rss-square fa-fw"></i>RSS</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<article>
+	<h1><a href="#"><center>{{ .Title }}</center></a></h1>
+	<i class="fa fa-calendar fa-fw"></i> <time>{{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ else }}{{ .Date.Format "02 Jan 2006, 15:04" }}{{ end }}</time><br>
+	<i class="fa fa-tags fa-fw"></i>Tags<br>
+	<p>
+		{{ .Summary }}
+	</p>
+	{{ if .Truncated }}
+		<p style="text-align: right;"><a class="read-more" href="{{ .RelPermalink }}">Continue Reading <i class="fa fa-arrow-right"></i></a></p>
+	{{ end }}
+</article>
+<br>

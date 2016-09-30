@@ -1,0 +1,225 @@
+/*
+Box-sizing for everything. Sanity once again befalls the html lands.
+*/
+* {
+  box-sizing: border-box;
+}
+/*
+Clearfix hack fixes problems that sometimes happen when float things are
+taller than the container. Add this to container to fix it 
+*/
+.clearfix {
+  overflow: auto;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+#header-title {
+  margin: 0px;
+  padding-left: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  /*background: orange;*/
+  width: 50%;
+  color: #0F2330;
+}
+
+#header-subtitle {
+  margin: 0px;
+  padding-right: 0.2rem;
+  font-size: 1.3rem;
+  font-style: italic;
+  /*background: cyan;*/
+  width: 50%;
+  text-align: right;
+  color: #0F2330;
+}
+
+#topnav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#main-container, header {
+  padding: 10px;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  flex: 1 1 auto;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+article {
+  flex: 1 0 auto;
+  padding: 5px;
+  /*background: seagreen;*/
+  max-width: 1000px;
+  border-style: solid;
+  border-color: #3b8bba;
+  border-width: 1px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.30);
+  background-color: white;
+  color: #333333;
+}
+
+article img {
+  max-width: 900px;
+  display: block;
+  margin: auto;
+
+}
+
+footer {
+  background: #d1d5e0;/*#cfc7c7;*/
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #3b8bba;
+  text-decoration: none;
+  /*font-weight: bold;*/
+}
+
+footer a:hover,
+footer a:focus {
+  text-decoration: underline;
+}
+
+footer a:visited {
+  color: #265778;
+}
+
+header {
+  background: #3b8bba;  /*   #265778; #3b8bba; #4d8c69;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+#header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  max-width: 1600px;
+  /*background: orange;*/
+}
+
+nav {
+  background: #3b8bba;
+  width: 100%;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover, nav a:focus {
+  background: #265778;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+  flex-grow: 1;
+}
+
+nav ul li {
+    list-style: none;
+    flex-grow: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    border-width: 1px;
+    border-color: #f4f4f4;
+    border-style: solid;
+}
+
+article h1 {
+  margin: 0rem;
+  color: #3b8bba;
+  text-decoration: none;
+}
+
+article a {
+  color: #3b8bba;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article a:hover,
+article a:focus {
+  text-decoration: underline;
+}
+
+article a:visited {
+  color: #265778;
+}
+
+.read-more {
+  text-align: right;
+  background-color: white;
+  color: #3b8bba;
+  border-style: solid;
+  border-color: #3b8bba;
+  border-width: 1px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.30);
+  background-color: white;
+  padding: 10px 20px;
+  text-decoration: none; 
+}
+
+.read-more:hover,
+.read-more:focus {
+     background: #3b8bba;
+     color: white;
+     text-decoration: none; 
+     font-weight: bold;
+}
+
+/* 
+* Media Queries
+*
+*/
+@media screen and (min-width: 769px) {
+  
+}
