@@ -1,0 +1,2 @@
+# bluetheme
+A Hugo theme
