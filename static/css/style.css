@@ -65,17 +65,20 @@ body {
   padding-top: 1rem;
 }
 
+#pagination {
+  max-width: 1000px;
+  border-width: 0px;
+  background-color: red;
+}
+
 article {
   flex: 1 0 auto;
   padding: 5px;
-  /*background: seagreen;*/
   max-width: 1000px;
   border-style: solid;
   border-color: #3b8bba;
-  border-width: 1px;
   border-radius: 25px;
   border-width: 2px;
-  border-style: solid;
   box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.30);
   background-color: white;
   color: #333333;
@@ -210,6 +213,29 @@ article a:visited {
 
 .read-more:hover,
 .read-more:focus {
+     background: #3b8bba;
+     color: white;
+     text-decoration: none; 
+     font-weight: bold;
+}
+
+.paginatelink {
+  background-color: white;
+  color: #3b8bba;
+  border-style: solid;
+  border-color: #3b8bba;
+  border-width: 1px;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.30);
+  background-color: white;
+  padding: 10px 20px;
+  text-decoration: none; 
+}
+
+.paginatelink:hover,
+.paginatelink:focus {
      background: #3b8bba;
      color: white;
      text-decoration: none; 
