@@ -1,20 +1,21 @@
 {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+	<span style="text-align: center; font-weight: bold;">Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+
 	<div id="pagination">
-		{{ $prev := "fa fa-chevron-left"}}
-		{{ $next := "fa fa-chevron-right"}}
+		
+
+		{{ $prev := "fa fa-arrow-left"}}
+		{{ $next := "fa fa-arrow-right"}}
 	
 		{{ if .Paginator.HasPrev }}
-			<a class="paginatelink" href="{{ .Paginator.Prev.URL }}"><i class="{{ $prev }}"></i>Newer Posts</a>
+			<a class="paginatelink" href="{{ .Paginator.Prev.URL }}"><i class="{{ $prev }}"></i> <span class="boldtext">Newer Posts</span></a>
 		{{ else }}
-			<i class="{{ $prev }}"></i>Newer Posts
+			<span class="disabled-paginatelink"><i class="{{ $prev }}"></i> Newer Posts</span>
 		{{ end }}
-
-		{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}
-
 		{{ if .Paginator.HasNext }}
-			<a class="paginatelink" href="{{ .Paginator.Next.URL }}">Older Posts <i class="{{ $next }}"></i></a>
+			<a class="paginatelink" href="{{ .Paginator.Next.URL }}"><span class="boldtext">Older Posts</span> <i class="{{ $next }}"></i></a>
 		{{ else }}
-			Older Posts <i class="{{ $next }}"></i>
+			<span class="disabled-paginatelink">Older Posts <i class="{{ $next }}"></i></span>
 		{{ end }}
 
 	</div>
