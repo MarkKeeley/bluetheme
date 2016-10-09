@@ -1,35 +1,12 @@
+{{ partial "head.html" . }}
 {{ partial "header.html" . }}
-<body>
-  <header>
-      <div id="header-container">
-        <div id="topnav">
-          <div id="header-title">
-  	     	 {{ .Title }}
-  	      </div>
-  	      <div id="header-subtitle">
-  	    	  {{ .Site.Params.subtitle }}
-  	      </div>
-        </div>
-  	    <nav>
-        	<ul>
-            <li><a href="#"><i class='fa fa-home fa-fw'></i>Home</a></li>
-    	      <li><a href="#"><i class='fa fa-list fa-fw'></i>Posts</a></li>
-    	      <li><a href="#"><i class='fa fa-tag fa-fw'></i>Tags</a></li>
-    	      <li><a href="#"><i class='fa fa-book fa-fw'></i>Go+SDL2</a></li>
-            <li><a href="#"><i class='fa fa-link fa-fw'></i>Links</a></li>
-          </ul>
-  		  </nav>
-      </div>   
-  </header>	
-  
-  <div id="main-container">
 
     {{- range ( .Paginate (where .Data.Pages "Type" "post")).Pages }}
         {{ .Render "summary" }}
     {{ end -}}
 
     
-  </div>
+  </div> <!--end the main-container div from header.html-->
   {{ partial "pagination.html" . }}
   {{ partial "footer.html" . }}
 

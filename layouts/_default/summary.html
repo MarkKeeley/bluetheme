@@ -1,15 +1,15 @@
 <article>
-	<h1><a href="{{ .RelPermalink }}"><center>{{ .Title }}</center></a></h1>
+	<h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
 	<i class="fa fa-calendar fa-fw"></i> <time>{{ with .Site.Params.dateFormat }}{{ $.Date.Format . }}{{ else }}{{ .Date.Format "02 Jan 2006, 15:04" }}{{ end }}</time><br>
 	
 	{{ if isset .Params "author" }}
   		<i class="fa fa-user fa-fw"></i> By {{ .Params.author }}
   		<br>
-  	{{ end }}
+  	{{ end -}}
 
-	{{ $baseUrl := .Site.BaseURL }}
+	{{- $baseUrl := .Site.BaseURL -}}
 
-	{{ if isset .Params "topics" }}
+	{{- if isset .Params "topics" }}
   		{{ $count := len .Params.topics }}
   			{{ if gt $count 0 }}
     			<i class="fa fa-folder fa-fw"></i>

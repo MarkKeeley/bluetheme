@@ -96,6 +96,10 @@ article img {
 
 }
 
+article h1 {
+  text-align: center;
+}
+
 footer {
   background: #d1d5e0;/*#cfc7c7;*/
   text-align: center;
@@ -135,7 +139,7 @@ header {
   width: 100%;
   padding: 0px;
   margin: 0px;
-  max-width: 1600px;
+  max-width: 1000px;
   /*background: orange;*/
 }
 
@@ -149,7 +153,8 @@ nav a {
 }
 
 nav a:hover, nav a:focus {
-  background: #265778;
+  /*background: #265778;*/
+  text-decoration: underline;
 }
 
 nav ul {
@@ -174,9 +179,9 @@ nav ul li {
 nav ul li a {
     display: block;
     text-decoration: none;
-    border-width: 1px;
+    /*border-width: 1px;
     border-color: #f4f4f4;
-    border-style: solid;
+    border-style: solid;*/
 }
 
 article h1 {
