@@ -1,0 +1,10 @@
+{{ if or (.Prev) (.Next) }}
+	<article style="text-align: center;">
+	  		{{ if .NextInSection }}
+	  				<a href="{{ .NextInSection.Permalink }}"><i class="fa fa-arrow-left"></i> {{ .NextInSection.Title }}</a><br>
+	  		{{ end }}
+	  		{{ if .PrevInSection }}
+	  				<a href="{{ .PrevInSection.Permalink }}">{{ .PrevInSection.Title }} <i class="fa fa-arrow-right"></i></a>
+	  		{{ end }}
+	</article>
+{{ end }}

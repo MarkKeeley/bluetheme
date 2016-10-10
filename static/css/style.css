@@ -271,6 +271,18 @@ article a:visited {
   text-decoration: none; 
 }
 
+#prevnextpost {
+  display: flex;
+  flex-direction: row;
+  background-color: orange;
+  max-width: 1000;
+}
+
+.prevnextpost {
+  /*width: 50%;*/
+  flex 1;
+}
+
 iframe {
   margin: 0 auto;
   display:block;

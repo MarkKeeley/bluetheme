@@ -1,13 +1,15 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 	<article>
-  <h1>{{ .Title }}</h1>
-  <h6>{{ .Date.Format "Mon, Jan 2, 2006" }}</h6>
-  {{ .Content }}
-  <h4><a href="{{ .Site.BaseURL }}">Home</a></h4>
+		<h1>{{ .Title }}</h1>
+		{{ partial "post_meta.html" . }}
+		{{ .Content }}
   	</article>
-  	</div>
   	<br>
-  	{{ partial "footer.html" . }}
+  	{{ partial "prev_next_post.html" . }}
+
+</div><!--end the main-container div from header.html-->
+<br>
+{{ partial "footer.html" . }}
 </body>
 </html>

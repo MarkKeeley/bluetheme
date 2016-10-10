@@ -11,11 +11,10 @@
         </div>
   	    <nav>
         	<ul>
-            <li><a href="#"><i class='fa fa-home fa-fw'></i>Home</a></li>
-    	      <li><a href="#"><i class='fa fa-list fa-fw'></i>Posts</a></li>
-    	      <li><a href="#"><i class='fa fa-tag fa-fw'></i>Tags</a></li>
-    	      <li><a href="#"><i class='fa fa-book fa-fw'></i>Go+SDL2</a></li>
-            <li><a href="#"><i class='fa fa-link fa-fw'></i>Links</a></li>
+            {{ range .Site.Menus.main }}
+              <li><a href="{{ .URL }}">{{ .Pre }}{{ .Name }}</a></li>
+
+            {{ end }}
           </ul>
   		  </nav>
       </div>   
